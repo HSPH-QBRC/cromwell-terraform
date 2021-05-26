@@ -1,5 +1,5 @@
 variable "project_id" {
-  description = "GCP project ID"
+  description = "GCP project ID. This is the text-based ID, not the numeric ID."
 }
 
 variable "region" {
@@ -50,4 +50,8 @@ variable "cromwell_db_password" {
   description = "Password for the database"
   type        = string
   sensitive   = true
+}
+
+variable "service_account_email" {
+  description = "The email-like identifier of the service account attached to the VM instance. Must have adequate permissions."
 }
